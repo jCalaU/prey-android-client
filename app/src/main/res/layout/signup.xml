@@ -4,7 +4,18 @@
     android:background="@drawable/bg_w"
     android:orientation="vertical" >
 
-    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qrcode"
+
+        android:id="@+id/imageViewQr"
+        android:layout_above="@+id/textViewInit1"
+        android:layout_alignRight="@+id/textViewInit1"
+        android:layout_alignEnd="@+id/textViewInit1"
+        android:layout_marginBottom="55dp" />
+
+
      <TextView
         android:id="@+id/textViewInit1"
         android:layout_width="fill_parent"

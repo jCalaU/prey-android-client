@@ -52,7 +52,7 @@ import com.prey.net.PreyWebServices;
 import com.prey.util.KeyboardStatusDetector;
 import com.prey.util.KeyboardVisibilityListener;
 
-public class CheckPasswordActivity extends Activity implements ActivityCompat.OnRequestPermissionsResultCallback {
+public class CheckPasswordActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     int wrongPasswordIntents = 0;
 
@@ -61,8 +61,8 @@ public class CheckPasswordActivity extends Activity implements ActivityCompat.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
         setContentView(R.layout.password2);
@@ -210,8 +210,8 @@ public class CheckPasswordActivity extends Activity implements ActivityCompat.On
                     }
                 });
 
-
-                alertDialog.show();
+                if(alertDialog!=null)
+                    alertDialog.show();
             }
 
 

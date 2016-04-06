@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -98,6 +99,16 @@ public class SignUpActivity extends Activity {
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
+
+        ImageView  imageViewQr=(ImageView)findViewById(R.id.imageViewQr);
+        imageViewQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BarcodeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         final int halfHeight=metrics.heightPixels/3;
